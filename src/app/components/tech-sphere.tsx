@@ -65,7 +65,6 @@ const cloudProps = {
       justifyContent: 'center',
       alignItems: 'center',
       width: '100%',
-      height: '100%',
       transform: 'scale(0.9)',
     },
   },

@@ -16,7 +16,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { portfolioConfig } from '@/app/config';
 import { Button } from '@/app/components/button';
 import dynamic from 'next/dynamic';
@@ -237,19 +237,6 @@ const Home: React.FC<HomeProps> = ({ onConnectClick }) => {
           )}
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-20"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-      >
-        <span className="text-gray-400 text-sm mb-2">{config.scrollIndicatorText}</span>
-        <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
-          <ChevronDown className="text-emerald-400" size={24} />
-        </motion.div>
-      </motion.div>
     </section>
   );
 };

@@ -18,7 +18,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Rocket, Lightbulb, BarChart3 } from 'lucide-react';
+import { Code, Rocket, Lightbulb, BarChart3, BookOpen, Zap } from 'lucide-react';
 import { portfolioConfig } from '@/app/config';
 import { isMinimal } from '@/app/utils';
 
@@ -27,10 +27,12 @@ const About = () => {
 
   const getIconComponent = (iconName: string) => {
     const icons: { [key: string]: React.ReactNode } = {
+      Zap: <Zap size={24} />,
       Rocket: <Rocket size={24} />,
       Code: <Code size={24} />,
       Lightbulb: <Lightbulb size={24} />,
       BarChart3: <BarChart3 size={24} />,
+      BookOpen: <BookOpen size={24} />,
     };
 
     return icons[iconName] || <Rocket size={24} />;
@@ -67,7 +69,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title with animation */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
@@ -128,30 +130,33 @@ const About = () => {
             className="h-full"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
-              {config.qualities.map((quality, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  className="bg-gray-800/40 backdrop-blur-sm rounded-2xl border border-gray-700/50 shadow-xl overflow-hidden relative h-full group hover:border-emerald-500/30 transition-all duration-300"
-                >
-                  <div className="p-6 relative">
-                    {/* Gradient circle behind icon */}
-                    <div
-                      className={`absolute top-6 left-6 w-12 h-12 rounded-full bg-gradient-to-r ${quality.gradient} opacity-10 blur-lg`}
-                    />
+              {config.qualities.map((quality, index) => {
+                console.log(quality);
+                return (
+                  <motion.div
+                    key={index}
+                    variants={itemVariants}
+                    className="bg-gray-800/40 backdrop-blur-sm rounded-2xl border border-gray-700/50 shadow-xl overflow-hidden relative h-full group hover:border-emerald-500/30 transition-all duration-300"
+                  >
+                    <div className="p-6 relative">
+                      {/* Gradient circle behind icon */}
+                      <div
+                        className={`absolute top-6 left-6 w-12 h-12 rounded-full bg-gradient-to-r ${quality.gradient} opacity-10 blur-lg`}
+                      />
 
-                    {/* Icon with gradient background */}
-                    <div
-                      className={`w-12 h-12 rounded-full bg-gradient-to-r ${quality.gradient} flex items-center justify-center text-white mb-4`}
-                    >
-                      {getIconComponent(quality.icon)}
+                      {/* Icon with gradient background */}
+                      <div
+                        className={`w-12 h-12 rounded-full bg-gradient-to-r ${quality.gradient} flex items-center justify-center text-white mb-4`}
+                      >
+                        {getIconComponent(quality.icon)}
+                      </div>
+
+                      <h4 className="text-lg font-semibold text-white mb-2">{quality.title}</h4>
+                      <p className="text-gray-300 text-sm">{quality.description}</p>
                     </div>
-
-                    <h4 className="text-lg font-semibold text-white mb-2">{quality.title}</h4>
-                    <p className="text-gray-300 text-sm">{quality.description}</p>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         </div>

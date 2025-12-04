@@ -18,6 +18,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { socials } from '@/app/config/socials';
 import { isMinimal } from '@/app/utils';
+import portfolioConfig from '../config';
 
 const ConnectWithMe: React.FC = () => {
   const containerVariants = {
@@ -41,6 +42,8 @@ const ConnectWithMe: React.FC = () => {
           transition: { duration: 0.5, ease: 'easeOut' },
         },
       };
+
+  const connectData = portfolioConfig.sections.connect;
 
   const getRgbValues = (hexColor: string) => {
     const hex = hexColor.replace('#', '');
@@ -125,16 +128,13 @@ const ConnectWithMe: React.FC = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Connect{' '}
+            {connectData.title + ' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500">
-              With Me
+              {connectData.subtitle}
             </span>
           </h2>
           <div className="mt-4 h-1 w-20 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto rounded-full" />
-          <p className="mt-6 text-gray-300 max-w-2xl mx-auto">
-            Feel free to connect with me on these platforms to discuss tech, share ideas, or just
-            say hello!
-          </p>
+          <p className="mt-6 text-gray-300 max-w-2xl mx-auto">{connectData.description}</p>
         </motion.div>
 
         {/* Social links grid */}

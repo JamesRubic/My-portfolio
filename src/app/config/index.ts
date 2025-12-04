@@ -20,19 +20,18 @@ import { projects } from '@/app/config/projects';
 import { skills } from '@/app/config/skills';
 
 /**
- * Default portfolio configuration
- * Edit this file to customize your portfolio
+ * My portfolio configuration
  */
 export const portfolioConfig: PortfolioConfig = {
   siteMetadata: {
-    title: 'Praveen Kumar',
-    description: 'Portfolio website by Praveen',
-    author: 'Praveen Kumar',
+    title: 'Christen Kael',
+    description: 'Portfolio website by Christen',
+    author: 'Christen Kael',
   },
 
   navigation: {
     logo: {
-      text: 'PK',
+      text: 'CK',
     },
     links: [
       { href: 'home', label: 'Home' },
@@ -46,14 +45,14 @@ export const portfolioConfig: PortfolioConfig = {
   sections: {
     home: {
       greeting: "Hi, I'm",
-      name: 'Praveen Kumar',
+      name: 'Christen Kael',
       typingTexts: [
-        'Building digital experiences',
-        'Solving complex problems',
+        'Building intuitive web apps',
+        'exploring new technologies',
         'Creating user-focused apps',
       ],
       description:
-        "I'm enthusiastic about discovering new digital technologies and expanding my knowledge of innovative, creative design principles. My curiosity drives me to continuously learn about modern technologies and their potential to create meaningful experiences.",
+        'I am a dedicated Software Engineer specializing in full-stack application development. I enjoy crafting responsive web solutions using modern technologies like Next.js, React, Tailwind CSS, Node.js, Express, and MongoDB, while also applying DevOps practices, continuously aiming to deliver high-quality, comprehensive, user-centric software solutions.',
       scrollIndicatorText: 'Scroll to explore',
     },
 
@@ -61,15 +60,23 @@ export const portfolioConfig: PortfolioConfig = {
       title: 'About',
       subtitle: 'Me',
       bio: [
-        "Hi, I'm a Software Engineering enthusiast living in Bangalore. I enjoy turning creative ideas into working solutions in my spare time.",
-        "I've been exploring tech for about 2 years, with interests spanning across different development areas. I'm fascinated by intuitive digital experiences that just feel right.",
-        "When I'm not working on code professionally, you'll find me reading about emerging technologies, contributing to open-source projects, and constantly picking up new skills and hobbies.",
+        "Hi, I'm Christen, a Senior Full-Stack Software Engineer who loves turning ideas into fast, scalable, and user-focused digital products.For the past several years, I’ve been building applications end-to-end — from clean, intuitive front-end interfaces to stable, high-performance back-end systems.",
+        'I specialize in modern JavaScript technologies like React, Next.js, TypeScript, Node.js, Express, and Tailwind, and I’m experienced in designing APIs, architecting databases, and delivering full solutions that work at scale.',
+        'What excites me most about software engineering is solving real problems: Improving performance, creating smooth UX, automating business workflows, integrating complex APIs, and building products that grow with the business.',
+        "I focus on writing clean, maintainable code, communicating clearly, and delivering reliable results. Whether it's building a new feature, optimizing an existing system, or architecting a full product from scratch, I bring both technical depth and a strong sense of ownership to every project.",
+        'If you’re looking for someone who can handle the front end, the back end, the logic, the architecture, and the delivery, I’m ready to build it with you.',
       ],
       details: [
-        { label: 'Location', value: 'Based in Bangalore' },
-        { label: 'Experience', value: '2+ Years Experience' },
+        { label: 'Level', value: 'Senior Software Engineer' },
+        { label: 'Experience', value: '6+ Years Experience' },
       ],
       qualities: [
+        {
+          icon: 'Zap',
+          title: 'Fast & Efficient Development',
+          description: 'Delivering high-performance solutions with clean, optimized code',
+          gradient: 'from-emerald-500 to-blue-500',
+        },
         {
           icon: 'Rocket',
           title: 'Problem Solver',
@@ -98,6 +105,12 @@ export const portfolioConfig: PortfolioConfig = {
             'I prioritize creating intuitive, accessible experiences that meet real user needs.',
           gradient: 'from-indigo-500 to-cyan-500',
         },
+        {
+          icon: 'BookOpen',
+          title: 'Continuous Learning & Growth',
+          description: 'Always exploring new technologies and improving skills',
+          gradient: 'from-indigo-500 to-cyan-500',
+        },
       ],
     },
 
@@ -109,7 +122,7 @@ export const portfolioConfig: PortfolioConfig = {
       projects: projects,
       viewMoreButton: {
         label: 'View More Projects',
-        url: 'https://github.com/PraveenGongada',
+        url: 'https://github.com/ThomasKingsley',
       },
     },
 
@@ -131,7 +144,7 @@ export const portfolioConfig: PortfolioConfig = {
   },
 
   footer: {
-    copyright: `© ${new Date().getFullYear()} Praveen Kumar. All rights reserved.`,
+    copyright: `© ${new Date().getFullYear()} Christen Kael. All rights reserved.`,
     tagline: 'Designed and built with ❤️',
   },
 };
